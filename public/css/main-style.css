@@ -840,15 +840,18 @@ header {
 .bottom-btns {
 	text-align:center;
 }
-.bottom-btns a {
+.bottom-btns > a {
 	line-height: 60px;
 	border-radius: 4px;
 	margin: 0px 6px;
 	display: inline-block;
-	color: #fff;	
+	color: #fff;
 	font-size: 16px;
 	font-weight: 600;
 	text-align: center;
+}
+.cls_submitbtn {
+    height: 60px !important;
 }
 .bottom-btns a span {
     position: relative;

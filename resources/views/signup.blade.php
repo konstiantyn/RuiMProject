@@ -49,7 +49,7 @@
                                 <li><a href="url_projectlist">Project List</a></li>
                                 <li><a href="url_logooverlay">Logo Overlay</a></li>
                                 <li><a href="url_playlistmsg">Messages</a></li>
-                                <li><a href="url_signup"><i class="fa fa-registered"></i></a></li>
+                                <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
                             </ul>
                         </div>
                     </nav>
@@ -61,20 +61,21 @@
         <section class="contaneSection">
             <div class="container">
                 <div class="row">
-                <h1 class="titleh1 loginTitle">Login</h1>
-                <div class="col-lg-4 emptyDiv">&nbsp;</div>
-                <div class="col-lg-4 col-xs-12">
-                    <div class="row">
-                        <form action="url_loginaction" method="post">
-                            {{ csrf_field() }}
-                            <div class="col-lg-12 inputRow"><input type="text" required name="username" placeholder="Username" class="input"></div>
-                            <div class="col-lg-12 inputRow"><input type="password" required name="password" placeholder="Password" class="input"></div>
-                            <div class="col-lg-12 inputRow"><a href="#" class="forgot">Forgot password?</a></div>
-                            <div class="col-lg-12 bottom-btns"><button type="submit" style="height: 60px; color: #fff; font-size: 16px; border-radius: 4px; font-weight: 600; outline: none; display: inline-block;" class="btn add-video-btn"> Login </button></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4 emptyDiv">&nbsp;</div>
+                <h1 class="titleh1 loginTitle">Sign up</h1>
+                     <div class="col-lg-4 emptyDiv">&nbsp;</div>
+                     <div class="col-lg-4 col-xs-12">
+                        <div class="row">
+                            <form action="url_signupaction" method="post">
+                                {{ csrf_field() }}
+                                <div class="col-lg-12 inputRow"><input type="text" required name="username" placeholder="Username" class="input"></div>
+                                <div class="col-lg-12 inputRow"><input type="password" required name="password" placeholder="Password" class="input"></div>
+                                <div class="col-lg-12 bottom-btns">
+                                    <button type="submit" style="height: 60px; color: #fff; font-size: 16px; border-radius: 4px; font-weight: 600; outline: none; display: inline-block;" class="btn add-video-btn"> Sign up </button>
+                                </div>
+                            </form>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 emptyDiv">&nbsp;</div>
                 </div><!--row-->
             </div><!--container-fluid-->
         </section><!--sectionhome-->
