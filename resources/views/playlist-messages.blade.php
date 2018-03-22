@@ -48,7 +48,18 @@
                                 </li>
                                 <li><a href="url_projectlist">Project List</a></li>
                                 <li><a href="url_logooverlay">Logo Overlay</a></li>
-                                <li><a href="url_playlistmsg">Messages</a></li>
+                                <li><a href="#">Messages</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createmessage">New Message</a></li>
+                                        <li><a href="url_editmessage">Edit Message</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Video Clip</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createvideoclip">New Clip</a></li>
+                                        <li><a href="url_editvideoclip">Edit Clip</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="url_signup"><i class="fa fa-registered"></i></a></li>
                                 <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
                                 @if(session('sname'))
@@ -70,13 +81,10 @@
 					<div class="row edit-playlist-section">
 						<div class="col-sm-12 col-md-12">
 							<select class="form-control" id="#">
-								<option>New Messages</option>
 								<option>New Messages 1</option>
 								<option>New Messages 2</option>
 								<option>New Messages 3</option>
 								<option>New Messages 4</option>
-								<option>New Messages 5</option>
-								<option>New Messages 6</option>
 							</select>
 						</div><!--col-12-->
 					</div><!--row | edit-playlist-section-->
@@ -87,73 +95,25 @@
 				<div class="table-section playlist-m">
 					<div class="table-responsive">          
 						<table class="table">
-						<thead>
-						  <tr>
-							<th class="video-clips-links">Playlist Name</th>						
-						  </tr>
-						</thead>
-						<tbody>
-						  <tr class="active-tr">
-							<td>Rigi-Kulm sunset 1</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						  <tr>
-							<td>Rigi-Kulm sunset XXXXXXX</td>
-						  </tr>
-						</tbody>
+							<thead>
+							  <tr>
+								<th class="video-clips-links">Playlist Name</th>						
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr class="active-tr">
+								<td>Rigi-Kulm sunset 1</td>
+							  </tr>
+							  <tr>
+								<td>Rigi-Kulm sunset XXXXXXX</td>
+							  </tr>
+							  <tr>
+								<td>Rigi-Kulm sunset XXXXXXX</td>
+							  </tr>
+							  <tr>
+								<td>Rigi-Kulm sunset XXXXXXX</td>
+							  </tr>
+							</tbody>
 						</table>
 					</div><!--table-responsive-->
 				</div><!--table-section-->

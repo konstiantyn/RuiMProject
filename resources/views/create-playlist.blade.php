@@ -49,7 +49,18 @@
                                 </li>
                                 <li><a href="url_projectlist">Project List</a></li>
                                 <li><a href="url_logooverlay">Logo Overlay</a></li>
-                                <li><a href="url_playlistmsg">Messages</a></li>
+                                <li><a href="#">Messages</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createmessage">New Message</a></li>
+                                        <li><a href="url_editmessage">Edit Message</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Video Clip</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createvideoclip">New Clip</a></li>
+                                        <li><a href="url_editvideoclip">Edit Clip</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="url_signup"><i class="fa fa-registered"></i></a></li>
                                 <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
                                 @if(session('sname'))
@@ -108,86 +119,6 @@
 								<tr class="active-tr">
 									<td>Sunset on Rigi Rotstock</td>
 									<td><span>message type=0 </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
-									<td><span>Welcome to the Queen of the mountains</span></td>
-								</tr>
-								<tr>
-									<td>Sunset on Rigi Rotstock</td>
-									<td><span>message type=0 simply dummy text </span></td>
 									<td><span>Welcome to the Queen of the mountains</span></td>
 								</tr>
 								<tr>

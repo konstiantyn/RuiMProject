@@ -48,7 +48,18 @@
                                 </li>
                                 <li><a href="url_projectlist">Project List</a></li>
                                 <li><a href="url_logooverlay">Logo Overlay</a></li>
-                                <li><a href="url_playlistmsg">Messages</a></li>
+                                <li><a href="#">Messages</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createmessage">New Message</a></li>
+                                        <li><a href="url_editmessage">Edit Message</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Video Clip</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createvideoclip">New Clip</a></li>
+                                        <li><a href="url_editvideoclip">Edit Clip</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
                             </ul>
                         </div>

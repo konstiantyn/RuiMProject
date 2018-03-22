@@ -48,7 +48,18 @@
                                 </li>
                                 <li><a href="url_projectlist">Project List</a></li>
                                 <li><a href="url_logooverlay">Logo Overlay</a></li>
-                                <li><a href="url_playlistmsg">Messages</a></li>
+                                <li><a href="#">Messages</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createmessage">New Message</a></li>
+                                        <li><a href="url_editmessage">Edit Message</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Video Clip</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createvideoclip">New Clip</a></li>
+                                        <li><a href="url_editvideoclip">Edit Clip</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="url_signup"><i class="fa fa-registered"></i></a></li>
                                 <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
                                 @if(session('sname'))
@@ -101,11 +112,11 @@
 					<div class="row edit-playlist-options">										
 						<div class="col-xs-6 col-sm-3 col-md-3">
 							<span>Ofset X-Position</span>
-							<input type="text" placeholder="10" class="text-center" >
+							<input type="text" disabled placeholder="10" class="text-center" >
 						</div><!--col-3-->
 						<div class="col-xs-6 col-sm-3 col-md-3">
 							<span>Ofset Y-Position</span>
-							<input type="text" placeholder="10" class="text-center" >
+							<input type="text" disabled placeholder="10" class="text-center" >
 						</div><!--col-3-->	
 					</div><!--row | edit-playlist-options-->
 				</div><!--col-12-->
@@ -161,14 +172,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/filterable.pack.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.simplyscroll.js"></script>
+	<!-- <script src="js/jquery.simplyscroll.js"></script> -->
 	<script src="js/wow.min.js"></script>
 	<script src="js/scrollbar.js"></script>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script>
+	<!-- <script>
 		new WOW().init();
 		$("#scroller").simplyScroll();
-	</script>
+	</script> -->
 	<!--Video Option-->
 	<script> 
 		var vid = document.getElementById("myVideo"); 

@@ -48,7 +48,18 @@
                                 </li>
                                 <li><a href="url_projectlist">Project List</a></li>
                                 <li><a href="url_logooverlay">Logo Overlay</a></li>
-                                <li><a href="url_playlistmsg">Messages</a></li>
+                                <li><a href="#">Messages</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createmessage">New Message</a></li>
+                                        <li><a href="url_editmessage">Edit Message</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Video Clip</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createvideoclip">New Clip</a></li>
+                                        <li><a href="url_editvideoclip">Edit Clip</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="url_signup"><i class="fa fa-registered"></i></a></li>
                                 <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
                                 @if(session('sname'))
@@ -193,7 +204,6 @@
                                 <span>1:15</span>
                             </span>
                         </div><!--timerStrip-->
-
                         <div class="editorStrip">
                             <div class="greenbox editorBox">Play Name<p>sub text here</p></div>
                             <div class="Bluebox editorBox" style="flex-shrink: 0">Play Name<p>sub text here</p></div>
@@ -235,12 +245,12 @@
                             </select>
                         </div><!--col-6-->
                         <div class="col-xs-6 col-sm-6 col-md-6">
-                            <a class="activate-playlist-button" href="#">
+                            <a class="activate-playlist-button" style="cursor: pointer;" onclick="alertfunc()">
                                 <span>Activate Selected Playlist</span>
                             </a>
                         </div><!--col-6-->
                         <div class="col-xs-6 col-sm-6 col-md-6">
-                            <a class="stop-playlist-button" href="#">
+                            <a class="stop-playlist-button" style="cursor: pointer;"  onclick="alertfunc()">
                                 <span>Stop Selected Playlist</span>
                             </a>
                         </div><!--col-6-->
@@ -256,114 +266,115 @@
                 <div id="menu1" class="tab-pane fade in active">
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="{{action('MainController@Viewvideofunc', ['id'=>1])}}">
                             <img src="images/video-1.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="{{action('MainController@Viewvideofunc', ['id'=>2])}}">
                             <img src="images/video-2.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="{{action('MainController@Viewvideofunc', ['id'=>3])}}">
                             <img src="images/video-3.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="{{action('MainController@Viewvideofunc', ['id'=>4])}}">
                             <img src="images/video-4.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="{{action('MainController@Viewvideofunc', ['id'=>5])}}">
                             <img src="images/video-5.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="{{action('MainController@Viewvideofunc', ['id'=>6])}}">
                             <img src="images/video-6.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="{{action('MainController@Viewvideofunc', ['id'=>7])}}">
                             <img src="images/video-7.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="{{action('MainController@Viewvideofunc', ['id'=>8])}}">
                             <img src="images/video-8.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                 </div><!--menu1-->
+                    
                 <div id="menu2" class="tab-pane fade">
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="url_viewvideo">
                             <img src="images/video-1.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="url_viewvideo">
                             <img src="images/video-2.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="url_viewvideo">
                             <img src="images/video-3.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="url_viewvideo">
                             <img src="images/video-4.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="url_viewvideo">
                             <img src="images/video-5.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="url_viewvideo">
                             <img src="images/video-6.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="url_viewvideo">
                             <img src="images/video-7.jpg">
                         </a>
                     </div>
                   </div><!--col-3-->
                   <div class="col-xs-6 col-sm-6 col-md-3 wow fadeInUp">
                     <div class="video-box">
-                        <a href="#">
+                        <a href="url_viewvideo">
                             <img src="images/video-8.jpg">
                         </a>
                     </div>
@@ -394,9 +405,14 @@
     <script src="js/wow.min.js"></script>
     <script src="js/scrollbar.js"></script>
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <!-- <script>
-        new WOW().init();
-        $("#scroller").simplyScroll();
-    </script> -->
+    <script>
+        // new WOW().init();
+        // $("#scroller").simplyScroll();
+        function alertfunc() {
+            if ('{{session('sname')}}' == '') {
+                document.location.href="{{ url('url_login') }}";
+            }
+        }
+    </script>
 </body>
 </html>

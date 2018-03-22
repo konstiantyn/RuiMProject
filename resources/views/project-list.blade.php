@@ -27,7 +27,7 @@
 	<header class="header-bg"> 
         <div class="navigation" data-spy="affix" data-offset-top="50">
             <div class="container">
-                <div class="row">               
+                <div class="row">				
                     <nav class="navbar navbar-inverse">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -48,7 +48,18 @@
                                 </li>
                                 <li><a href="url_projectlist">Project List</a></li>
                                 <li><a href="url_logooverlay">Logo Overlay</a></li>
-                                <li><a href="url_playlistmsg">Messages</a></li>
+                                <li><a href="#">Messages</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createmessage">New Message</a></li>
+                                        <li><a href="url_editmessage">Edit Message</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Video Clip</a>
+                                    <ul class="nav-submenu">
+                                        <li><a href="url_createvideoclip">New Clip</a></li>
+                                        <li><a href="url_editvideoclip">Edit Clip</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="url_signup"><i class="fa fa-registered"></i></a></li>
                                 <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
                                 @if(session('sname'))

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Message;
 
 class MainController extends Controller
 {
@@ -34,5 +35,26 @@ class MainController extends Controller
         } else {
             echo 'Fail Username and Password';
         }
+    }
+    
+    public function Viewvideofunc(Request $request) {
+        $rid = $request->id;
+        return view('view-video', array('sid'=>$rid));
+    }
+    
+    public function CreateMsgfunc(Request $request) {
+        $msgvari = new Message;
+        $msgvari->msg_effect = $request->scrollmode;
+        $msgvari->msg_speed = $request->scrollspeed;
+        $msgvari->msg_duration = $request->duration;
+        $msgvari->msg_xpos = $request->xposition;
+        $msgvari->msg_ypos = $request->yposition;
+        $msgvari->msg_fonttype = $request->fonttype;
+        $msgvari->msg_fontsize = $request->fontsize;
+        $msgvari->msg_fontcolor = $request->textcolor;
+        $msgvari->msg_del = 0;
+        $msgvari->msg_text = $request->examtext;
+        $msgvari->save();
+        return view('index');
     }
 }

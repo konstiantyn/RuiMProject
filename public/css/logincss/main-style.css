@@ -1002,13 +1002,23 @@ header {
 .logo-overlay-bottom {
 	margin-top: 50px;
 }
-.round span {     width: 100px;
+.round span {     
+    width: 100px;
     position: relative;
     right: -50px;
-	top: -10px;}
-	.video-scale .table-section{ height: 131px; margin: 0px; border: none; overflow-x: auto;}
-
-	.video-section .table-section{ max-height: 590px; overflow: auto; margin: 0px;}
-	.inputRow{ margin-bottom: 20px;}
-	.inputRow a.forgot{ color: #fff; text-decoration: none; float: right; font-size: 14px;}
-	.loginTitle{ margin-bottom: 50px;}
+	top: -10px;
+}
+.video-scale .table-section{ height: 131px; margin: 0px; border: none; overflow-x: auto;}
+.video-section .table-section{ max-height: 590px; overflow: auto; margin: 0px;}
+.inputRow{ margin-bottom: 20px;}
+.inputRow a.forgot{ color: #fff; text-decoration: none; float: right; font-size: 14px;}
+.loginTitle{ margin-bottom: 50px;}
+.cls_clipbtn {
+    margin-top: 90%;
+}
+.cls_videodiv {
+    margin-top: 4%;
+}
+.cls_videotbtn {
+    text-align: center;
+}
