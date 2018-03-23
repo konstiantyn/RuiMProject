@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Suisse View</title>
-        <meta name="keywords" content="Suisse View" />
+        <meta name="keywords" content="Suisse View"/>
         <!-- Bootstrap -->
         <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <!--    <link href="css/logincss/jquery.simplyscroll.css" rel="stylesheet">-->

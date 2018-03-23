@@ -9,14 +9,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Message;
+use App\Videoclip;
+use App\Project;
 
 class MainController extends Controller
 {
     public function Singupfunc(Request $request) {
         $userdb = new User;
         $userdb->user_name = $request->username;
-        $result = $userdb->where('user_name', $request->username);
+        $result = $userdb->where('user_name', $request->username)->first();
         if(isset($result)) {
+            echo $result; die();
             $error_msg_dup = "Duplicated Username.";
             return view('signup', array('error_msg_signup' => $error_msg_dup));
         }
@@ -64,5 +67,21 @@ class MainController extends Controller
         $msgvari->msg_text = $request->examtext;
         $msgvari->save();
         return view('index');
+    }
+    
+    public function CreateVideoClipfunc(Request $request) {
+        $videodb = new Videoclip;
+        $videodb->vd_name = $request->videocliptitle;
+        $videodb->vd_url = $request->videourl;
+        $videodb->vd_del = 0;
+        $videodb->save();
+    }
+
+    public function CreateProjectfunc(Request $request) {
+        $projectdb = new Project;
+        $projectdb->prj_name = $request->projectname;
+        $projectdb->prj_url = $request->projecturl;
+        $projectdb->prj_del = 0;
+        $projectdb->save();
     }
 }

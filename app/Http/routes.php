@@ -24,7 +24,10 @@ Route::get('url_viewvideo', 'MainController@Viewvideofunc');
 Route::get('url_createmessage', function(){return view('create-message');});
 Route::get('url_editmessage', function(){return view('edit-message');});
 Route::get('url_createvideoclip', function(){return view('create-video-clip');});
+Route::get('url_createproject', function(){return view('create-project');});
 
 Route::post('url_signupaction', 'MainController@Singupfunc');
 Route::post('url_loginaction', 'MainController@Loginfunc');
 Route::post('url_createmsgaction', 'MainController@CreateMsgfunc');
+Route::post('url_createclip', 'MainController@CreateVideoClipfunc');
+Route::post('url_createproject', 'MainController@CreateProjectfunc');

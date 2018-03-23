@@ -18,12 +18,6 @@
         <link href="css/logincss/main-style.css" rel="stylesheet">
         <link href="css/main-style.css" rel="stylesheet">
         <link href="css/logincss/responsive.css" rel="stylesheet">
-        <link href="css/video-js.css" rel="stylesheet">
-        <link href="css/videojs.watermark.css" rel="stylesheet">
-        <link href="css/videojs-logo-overlay.css" rel="stylesheet">
-        <link href="css/colorpick.css" rel="stylesheet">
-        <script src="js/video.js"></script>
-        <script src="js/videojs-logo-overlay.js"></script>
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -89,56 +83,24 @@
         <section class="contaneSection">
             <div class="container">
                 <div class="row">
-                <h1 class="titleh1 loginTitle">Create New Message</h1>
-                     <div class="col-lg-4 col-xs-12">
+                    <h1 class="titleh1 loginTitle">Create New Project</h1>
+                    <div class="col-lg-4 emptyDiv">&nbsp;</div>
+                    <div class="col-lg-4 col-xs-12">
                         <div class="row">
-                            <form action="url_createmsgaction" method="post">
+                            <form action="url_createproject" method="post">
                                 {{ csrf_field() }}
                                 <div class="col-lg-12 inputRow">
-                                    <select id="scrollMode" style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" name="scrollmode">
-                                        <option value="V:T:B">Vertical Scrolling Top-Bottom</option>
-                                        <option value="V:B:T">Vertical Scrolling Bottom-Top</option>
-                                        <option value="H:L:R">Horizontal Scrolling Left-Right</option>
-                                        <option value="H:R:L">Horizontal Scrolling Right-Left</option>
-                                    </select>
+                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" name="projectname" placeholder="Project Name">
                                 </div>
                                 <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="scrollspeed" placeholder="Scroll Speed" name="scrollspeed">
+                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" name="projecturl" placeholder="Project URL">
                                 </div>
-                                <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="durationSec" placeholder="Duration in second" name="duration">
-                                </div>
-                                <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="xpos" placeholder="Player X-Position" name="xposition">
-                                </div>
-                                <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="ypos" placeholder="Player Y-Position" name="yposition">
-                                </div>
-                                <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="fonttype" placeholder="Font-Type" name="fonttype">
-                                </div>
-                                <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="fontsize" placeholder="Font-Size" name="fontsize">
-                                </div>
-                                <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="colorpick" placeholder="Color" name="textcolor">
-                                </div>
-                                <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="bgcolor" placeholder="Background Color" name="backcolor">
-                                </div>
-                                <div class="col-lg-12 inputRow">
-                                    <input type="text" required style="width: 100%; height: 40px; line-height: 60px; border-radius: 3px; border: none; padding: 0px 15px;" id="extext" placeholder="Edit example text" name="examtext">
-                                </div>
-                                <div class="col-lg-12 bottom-btns">
-                                    <button type="submit" style="height: 60px; color: #fff; font-size: 16px; border-radius: 4px; font-weight: 600; outline: none; display: inline-block;" class="btn add-video-btn"> Create </button>
+                                <div class="cls_clipbtn col-lg-12 bottom-btns">
+                                    <button type="submit" style="height: 50px; color: #fff; font-size: 16px; border-radius: 4px; font-weight: 600; outline: none; display: inline-block;" class="btn add-video-btn"> Create </button>
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div class="col-lg-8" style="text-align: center;">
-                        <button id="button" style="background: linear-gradient(to right, #e646b7, #9933fe); height: 40px; color: #fff; font-size: 16px; border-radius: 4px; font-weight: 600; outline: none; display: inline-block;" class="btn add-video-btn">Test Message</button>
-                        <button id="button1" style="margin-left: 5%; background: linear-gradient(to right, #e646b7, #9933fe); height: 40px; color: #fff; font-size: 16px; border-radius: 4px; font-weight: 600; outline: none; display: inline-block;" class="btn add-video-btn">Stop Message</button>
-                        <div class="cls_videodiv" id="video-tag"></div>
+                        <div class="col-lg-4 emptyDiv">&nbsp;</div>
                     </div>
                 </div><!--row-->
             </div><!--container-fluid-->
@@ -161,12 +123,5 @@
         <script src="js/wow.min.js"></script>
         <script src="js/scrollbar.js"></script>
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/videojs-marquee-overlay.js"></script>
-        <script src="js/videojs-contrib-hls.js"></script>
-        <script src="js/jquery.js"></script>
-        <script src="js/videojs5-hlsjs-source-handler.js"></script>
-        <script src="js/jquery.marquee.js"></script>
-        <script src="js/videojs.watermark.js"></script>
-        <script src="js/script_message.js"></script>
     </body>
 </html>
