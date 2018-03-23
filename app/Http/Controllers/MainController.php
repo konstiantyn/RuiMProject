@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Message;
 
@@ -14,7 +15,12 @@ class MainController extends Controller
     public function Singupfunc(Request $request) {
         $userdb = new User;
         $userdb->user_name = $request->username;
-        $userdb->user_password = $request->password;
+        $result = $userdb->where('user_name', $request->username);
+        if(isset($result)) {
+            $error_msg_dup = "Duplicated Username.";
+            return view('signup', array('error_msg_signup' => $error_msg_dup));
+        }
+        $userdb->user_password = Hash::make($request->password);
         $userdb->user_role = 0;
         $userdb->user_del = 0;
         $userdb->save();
@@ -30,10 +36,12 @@ class MainController extends Controller
                 session(['sname' => $request->username]);
                 return view('index');
             } else {
-                echo 'Fail Password';
+                $error_msg_logpass = "Wrong Password.";
+                return view('login', array('error_msg_logpassword' => $error_msg_logpass, 'error_msg_loginuser' => ''));
             }
         } else {
-            echo 'Fail Username and Password';
+            $error_msg_logusername = "Wrong Username";
+            return view('login', array('error_msg_loginuser' => $error_msg_logusername, 'error_msg_logpassword' => ''));
         }
     }
     

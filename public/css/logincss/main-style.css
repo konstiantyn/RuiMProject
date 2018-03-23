@@ -1022,3 +1022,8 @@ header {
 .cls_videotbtn {
     text-align: center;
 }
+.cls_errormsg {
+	color: red;
+	text-align: center;
+	margin-bottom: 10px;
+}

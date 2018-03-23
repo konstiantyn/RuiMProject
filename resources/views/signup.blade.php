@@ -25,49 +25,49 @@
     </head>
     <body>
         <header class="header-bg"> 
-        <div class="navigation" data-spy="affix" data-offset-top="50">
-            <div class="container">
-                <div class="row">               
-                    <nav class="navbar navbar-inverse">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span> 
-                            </button>
-                            <a class="navbar-brand" href="url_homepage"><img src="images/logo.png" alt="Logo"></a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="myNavbar">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="url_homepage">Home</a></li>
-                                <li><a href="url_editplaylist">Edit Playlist</a>
-                                    <ul class="nav-submenu">
-                                        <li><a href="url_createplaylist">Create Playlist</a></li>
-                                        <li><a href="url_editplaylist">Edit Playlist</a></li>
-                                    </ul><!--nav-submenu-->
-                                </li>
-                                <li><a href="url_projectlist">Project List</a></li>
-                                <li><a href="url_logooverlay">Logo Overlay</a></li>
-                                <li><a href="#">Messages</a>
-                                    <ul class="nav-submenu">
-                                        <li><a href="url_createmessage">New Message</a></li>
-                                        <li><a href="url_editmessage">Edit Message</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Video Clip</a>
-                                    <ul class="nav-submenu">
-                                        <li><a href="url_createvideoclip">New Clip</a></li>
-                                        <li><a href="url_editvideoclip">Edit Clip</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
-                            </ul>
-                        </div>
-                    </nav>
+            <div class="navigation" data-spy="affix" data-offset-top="50">
+                <div class="container">
+                    <div class="row">               
+                        <nav class="navbar navbar-inverse">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span> 
+                                </button>
+                                <a class="navbar-brand" href="url_homepage"><img src="images/logo.png" alt="Logo"></a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="url_homepage">Home</a></li>
+                                    <li><a href="url_editplaylist">Edit Playlist</a>
+                                        <ul class="nav-submenu">
+                                            <li><a href="url_createplaylist">Create Playlist</a></li>
+                                            <li><a href="url_editplaylist">Edit Playlist</a></li>
+                                        </ul><!--nav-submenu-->
+                                    </li>
+                                    <li><a href="url_projectlist">Project List</a></li>
+                                    <li><a href="url_logooverlay">Logo Overlay</a></li>
+                                    <li><a href="#">Messages</a>
+                                        <ul class="nav-submenu">
+                                            <li><a href="url_createmessage">New Message</a></li>
+                                            <li><a href="url_editmessage">Edit Message</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Video Clip</a>
+                                        <ul class="nav-submenu">
+                                            <li><a href="url_createvideoclip">New Clip</a></li>
+                                            <li><a href="url_editvideoclip">Edit Clip</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="url_login"><i class="fas fa-sign-in-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
         <section class="contaneSection">
             <div class="container">
@@ -78,8 +78,17 @@
                         <div class="row">
                             <form action="url_signupaction" method="post">
                                 {{ csrf_field() }}
-                                <div class="col-lg-12 inputRow"><input type="text" required name="username" placeholder="Username" class="input"></div>
-                                <div class="col-lg-12 inputRow"><input type="password" required name="password" placeholder="Password" class="input"></div>
+                                <div class="col-lg-12 inputRow">
+                                    <input type="text" required name="username" placeholder="Username" class="input">
+                                </div>
+                                @if($error_msg_signup)
+                                    <div class="cls_errormsg">
+                                        <strong>{{ $error_msg_signup }}</strong>
+                                    </div>
+                                @endif
+                                <div class="col-lg-12 inputRow">
+                                    <input type="password" required name="password" placeholder="Password" class="input">
+                                </div>
                                 <div class="col-lg-12 bottom-btns">
                                     <button type="submit" style="height: 60px; color: #fff; font-size: 16px; border-radius: 4px; font-weight: 600; outline: none; display: inline-block;" class="btn add-video-btn"> Sign up </button>
                                 </div>

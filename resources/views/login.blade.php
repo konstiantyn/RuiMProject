@@ -78,9 +78,25 @@
                     <div class="row">
                         <form action="url_loginaction" method="post">
                             {{ csrf_field() }}
-                            <div class="col-lg-12 inputRow"><input type="text" required name="username" placeholder="Username" class="input"></div>
-                            <div class="col-lg-12 inputRow"><input type="password" required name="password" placeholder="Password" class="input"></div>
-                            <div class="col-lg-12 inputRow"><a href="#" class="forgot">Forgot password?</a></div>
+                            <div class="col-lg-12 inputRow">
+                                <input type="text" required name="username" placeholder="Username" class="input">
+                            </div>
+                            @if($error_msg_loginuser)
+                                <div class="cls_errormsg">
+                                    <strong>{{ $error_msg_loginuser }}</strong>
+                                </div>
+                            @endif
+                            <div class="col-lg-12 inputRow">
+                                <input type="password" required name="password" placeholder="Password" class="input">
+                            </div>
+                            @if($error_msg_logpassword)
+                                <div class="cls_errormsg">
+                                    <strong>{{ $error_msg_logpassword }}</strong>
+                                </div>
+                            @endif
+                            <div class="col-lg-12 inputRow">
+                                <a href="#" class="forgot">Forgot password?</a>
+                            </div>
                             <div class="col-lg-12 bottom-btns"><button type="submit" style="height: 60px; color: #fff; font-size: 16px; border-radius: 4px; font-weight: 600; outline: none; display: inline-block;" class="btn add-video-btn"> Login </button></div>
                         </form>
                     </div>
